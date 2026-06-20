@@ -131,14 +131,14 @@ def calculate_itr(N, P, T):
     return itr
 
 
-if selection_time == 0:
-    itr = 0
-else:
+if selection_time > 0:
     itr = calculate_itr(
         N=N,
         P=accuracy,
         T=selection_time
     )
+else:
+    itr = 0
 
 # =====================================================
 # PREDICTED FATIGUE
@@ -253,11 +253,16 @@ acc_decimal = acc_range / 100
 
 itr_curve = []
 
+# Use example selection time when user has not entered T yet
+plot_selection_time = selection_time if selection_time > 0 else 6.0
+
+itr_curve = []
+
 for p in acc_decimal:
     itr_value = calculate_itr(
         N=N,
         P=p,
-        T=selection_time
+        T=plot_selection_time
     )
     itr_curve.append(itr_value)
 
