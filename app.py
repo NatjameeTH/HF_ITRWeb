@@ -39,7 +39,6 @@ N = st.sidebar.number_input(
     step=1
 )
 
-<<<<<<< HEAD
 
 
 total_trials = st.sidebar.number_input(
@@ -51,36 +50,19 @@ total_trials = st.sidebar.number_input(
 if total_trials == 0:
     st.info("Please enter the total number of trials and correct trials to calculate ITR and HF-ITR.")
     st.stop()
-=======
-total_trials = st.sidebar.number_input(
-    "Total Trials",
-    min_value=1,
-    value=90,
-    step=1
-)
->>>>>>> 5670ee36092134622e17e293580d67442a45c25a
 
 correct_trials = st.sidebar.number_input(
     "Correct Trials",
     min_value=0,
-<<<<<<< HEAD
     max_value=max(int(total_trials), 0),
     value=0,
-=======
-    max_value=int(total_trials),
-    value=75,
->>>>>>> 5670ee36092134622e17e293580d67442a45c25a
     step=1
 )
 
 selection_time = st.sidebar.number_input(
     "Selection Time per Trial (s)",
     min_value=0.1,
-<<<<<<< HEAD
     value=6.0,
-=======
-    value=3.0,
->>>>>>> 5670ee36092134622e17e293580d67442a45c25a
     step=0.1
 )
 
@@ -119,17 +101,12 @@ alpha = st.sidebar.slider(
 # ACCURACY
 # =====================================================
 
-<<<<<<< HEAD
 if total_trials == 0:
     accuracy = 0
     accuracy_percent = 0
 else:
     accuracy = correct_trials / total_trials
     accuracy_percent = accuracy * 100
-=======
-accuracy = correct_trials / total_trials
-accuracy_percent = accuracy * 100
->>>>>>> 5670ee36092134622e17e293580d67442a45c25a
 
 # =====================================================
 # CONVENTIONAL ITR
@@ -464,8 +441,4 @@ st.latex(
 r"""
 F = I
 """
-<<<<<<< HEAD
 )
-=======
-)
->>>>>>> 5670ee36092134622e17e293580d67442a45c25a
