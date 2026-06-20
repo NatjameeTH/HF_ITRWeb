@@ -47,9 +47,7 @@ total_trials = st.sidebar.number_input(
     value=0,
     step=1
 )
-if total_trials == 0:
-    st.info("Please enter the total number of trials and correct trials to calculate ITR and HF-ITR.")
-    st.stop()
+
 
 correct_trials = st.sidebar.number_input(
     "Correct Trials",
