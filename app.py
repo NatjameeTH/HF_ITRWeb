@@ -35,7 +35,7 @@ st.sidebar.header("Conventional ITR Inputs")
 N = st.sidebar.number_input(
     "Number of Commands / Classes",
     min_value=2,
-    value=6,
+    value=2,
     step=1
 )
 
@@ -60,7 +60,7 @@ correct_trials = st.sidebar.number_input(
 selection_time = st.sidebar.number_input(
     "Selection Time per Trial (s)",
     min_value=0.1,
-    value=6.0,
+    value=0.1,
     step=0.1
 )
 
