@@ -18,4 +18,4 @@ A Streamlit-based web application for evaluating SSVEP-based Brain-Computer Inte
 
 ## Author
 
-Nat Me
+Natjamee Tohkhwan
