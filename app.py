@@ -57,10 +57,11 @@ correct_trials = st.sidebar.number_input(
     step=1
 )
 
+
 selection_time = st.sidebar.number_input(
     "Selection Time per Trial (s)",
-    min_value=0.1,
-    value=0.1,
+    min_value=0.0,
+    value=0.0,
     step=0.1
 )
 
@@ -130,11 +131,14 @@ def calculate_itr(N, P, T):
     return itr
 
 
-itr = calculate_itr(
-    N=N,
-    P=accuracy,
-    T=selection_time
-)
+if selection_time == 0:
+    itr = 0
+else:
+    itr = calculate_itr(
+        N=N,
+        P=accuracy,
+        T=selection_time
+    )
 
 # =====================================================
 # PREDICTED FATIGUE
@@ -210,6 +214,9 @@ with col4:
 # =====================================================
 
 st.subheader("Interpretation")
+
+if selection_time == 0:
+    st.warning("Please enter a selection time greater than 0 to calculate ITR.")
 
 if accuracy_percent <= (100 / N):
     st.warning(
