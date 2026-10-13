@@ -15,7 +15,7 @@ Research prototype for preliminary laboratory estimation only.
 The app does not acquire EEG or predict classification accuracy.
 
 """
-
+##แก้ใหม่
 
 
 from __future__ import annotations
